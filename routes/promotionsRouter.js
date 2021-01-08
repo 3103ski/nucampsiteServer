@@ -1,6 +1,10 @@
 const express = require('express');
 const promotionsRouter = express.Router();
 
+//-------
+// Promotions
+//--------
+
 promotionsRouter
 	.route('/')
 	.all((req, res, next) => {
@@ -23,7 +27,7 @@ promotionsRouter
 	});
 
 //-------
-// Promotions
+// Specific Promotion
 //--------
 
 promotionsRouter

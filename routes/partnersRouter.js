@@ -1,6 +1,10 @@
 const express = require('express');
 const partnersRouter = express.Router();
 
+//-------
+// Partners
+//-------
+
 partnersRouter
 	.route('/')
 	.all((req, res, next) => {
@@ -23,7 +27,7 @@ partnersRouter
 	});
 
 //-------
-// Partners
+// Specific Partner
 //-------
 
 partnersRouter
