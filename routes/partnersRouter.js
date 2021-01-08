@@ -12,9 +12,7 @@ partnersRouter
 		res.end('Will return partners data');
 	})
 	.post((req, res) => {
-		res.end(
-			`Will add partner: ${req.body.name} \nwith description: ${req.body.description}`
-		);
+		res.end(`Will add partner: ${req.body.name} \nwith description: ${req.body.description}`);
 	})
 	.put((req, res) => {
 		res.statusCode = 403;
@@ -25,7 +23,7 @@ partnersRouter
 	});
 
 //-------
-// Campsite
+// Partners
 //-------
 
 partnersRouter
@@ -35,15 +33,11 @@ partnersRouter
 	})
 	.post((req, res) => {
 		res.statusCode = 403;
-		res.end(
-			`POST operation not supported on /partners/${req.params.partnerId}`
-		);
+		res.end(`POST operation not supported on /partners/${req.params.partnerId}`);
 	})
 	.put((req, res) => {
 		res.write(`Updating partner: ${req.params.partnerId}\n`);
-		res.end(
-			`Will update the partner: ${req.body.name} with description ${req.body.description}`
-		);
+		res.end(`Will update the partner: ${req.body.name} with description ${req.body.description}`);
 	})
 	.delete((req, res) => {
 		res.end(`Deleting partner: ${req.params.partnerId}`);
