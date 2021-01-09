@@ -1,6 +1,5 @@
 const express = require('express');
 const Campsite = require('../models/campsite');
-
 const campsiteRouter = express.Router();
 
 //-------
@@ -28,16 +27,16 @@ campsiteRouter
 			})
 			.catch((err) => next(err));
 	})
-	.put((req, res) => {
-		res.statusCode = 403;
-		res.end(`PUT operation is not supported`);
-	})
 	.delete((req, res, next) => {
 		Campsite.deleteMany().then((response) => {
 			res.statusCode = 200;
 			res.setHeader('Content-Type', 'application/json');
 			res.json(response);
 		});
+	})
+	.put((req, res) => {
+		res.statusCode = 403;
+		res.end(`PUT operation is not supported`);
 	});
 
 //-------

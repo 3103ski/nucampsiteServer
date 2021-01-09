@@ -1,0 +1,24 @@
+{
+    "campsite": {
+        "name": "Some Campsite",
+        "description": "Some details about this site",
+        "image": "some/tyhsd/something.png",
+        "cost": 123,
+        "featured": false,
+        "elevation": 3200,
+        "comments": []
+    },
+    "partner": {
+        "name": "Some Partner",
+        "description": "This is our favorite partner of all",
+        "image": "some/tyhsd/something.png",
+        "featured": true
+    },
+    "promotion": {
+        "name": "Best Promotion",
+        "description": "The best deal in town",
+        "image": "some/tyhsd/something.png",
+        "featured": true,
+        "cost": 200
+    }
+}
